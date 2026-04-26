@@ -5,8 +5,7 @@ builder = "NIXPACKS"
 PYTHON_VERSION = "3.11"
 
 [deploy]
-workingDirectory = "myIDS"
-startCommand = "gunicorn myIDS.wsgi --bind 0.0.0.0:$PORT --log-file -"
+startCommand = "cd myIDS && gunicorn myIDS.wsgi --bind 0.0.0.0:$PORT --log-file -"
 healthcheckPath = "/"
 healthcheckTimeout = 600
 restartPolicyType = "ON_FAILURE"

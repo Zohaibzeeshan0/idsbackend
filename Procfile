@@ -1,1 +1,1 @@
-web: cd myIDS && gunicorn myIDS.wsgi --log-file -
+web: cd myIDS && gunicorn myIDS.wsgi --bind 0.0.0.0:$PORT --log-file -
