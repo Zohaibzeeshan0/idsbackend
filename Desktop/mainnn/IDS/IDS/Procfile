@@ -1,1 +1,1 @@
-web: cd myIDS && gunicorn myIDS.wsgi --log-file -
+web: gunicorn myIDS.wsgi --log-file -
